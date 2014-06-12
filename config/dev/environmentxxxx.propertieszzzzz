@@ -1,0 +1,58 @@
+# Default is 8081
+port = 8125
+
+# The size of the executor thread pool (that can handle blocking back-end processing).
+executor.threadPool.size = 20
+
+# The default service response format (default is JSON)
+#default.Format = json
+
+# A MongoDB URI/Connection string
+# see: http://docs.mongodb.org/manual/reference/connection-string/
+
+	 grantType = password
+	 applicationID = 30e9193b-682f-48e6-9457-868d922e40dd
+	 authenticateurl = http://m-api.ecollege-labs.com/token
+     cardApi = http://localhost:8125
+#	 cardApi = http://portello-1133568842.us-west-2.elb.amazonaws.com
+     mApi = http://m-api.ecollege-labs.com
+	 
+	 KeyMoniker = 336f3e3c-ebd1-4dac-9f0e-dc13f6175018
+	 Secret = 5e8a5b182fbd42c992daff4b07a164b3
+	 grantType = assertion
+	 assertionType = urn:ecollege:names:moauth:1.0:assertion
+	 client_117112 = corin
+	 clientName_117112 = Corinthian Colleges
+	 
+	 realdbserver = 10.52.126.246
+	 user = hemantham
+	 password = hm-1235
+	 
+	# mongodb.uri = mongodb://usw2b-pri-portello-mongodb-s0-02.asskickery.us/portello
+	  mongodb.uri = mongodb://usw2a-pri-portello-api-mongodb-s0-01.asskickery.us/portello
+	 
+ #   mongodb.uri = mongodb://localhost:27017/restexpress_blogging
+
+
+# The base URL, used as a prefix for links returned in data.
+# default is http://localhost:<port>
+#base.url = http://localhost:8125
+
+cors.origins = *
+cors.exposedHeaders = Location
+cors.allowedHeaders = Content-Type,Accept,Origin,Referer,User-Agent,Location,X-Authorization,Authorization
+cors.maxAge = 2592000
+
+subpub.isEnabled = false
+subpub.host = 192.168.56.101
+subpub.port = 4778
+subpub.key = 1234567890123456
+subpub.principalId = ONE
+subpub.callbackBaseUrl = http://10.180.181.32:8125
+
+#Configuration for the MetricsPlugin/Graphite
+metrics.isEnabled = true
+metrics.graphite.isEnabled = false
+metrics.graphite.host = 192.168.56.101
+metrics.graphite.port = 2003
+metrics.graphite.publishSeconds = 5
